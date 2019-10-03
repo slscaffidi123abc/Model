@@ -1,0 +1,61 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<section class=" text-left">
+    <h1 class="display-4">@Model.MainTitle</h1>
+
+
+</section>
+<section style="background-color:skyblue;color:white; "class="row text-sm-left"></section>
+    <aside class="col-lg-4 col-md-4 col-sm-4">
+        <p>525028,525044,525025,093414</p>
+        </aside>
+
+<section style="background-color:skyblue;color:white; "class="row text-sm-left"></section>
+    <aside class="col-lg-4 col-md-4 col-sm-4">
+        <p>"Ragland","Schury","Medek","Pfennig"</p>
+        </aside>
+<section>
+    @foreach(var Employees in Model.EmployeesID) 
+    {
+        <aside class="text-left ">
+            <span class="display-2">Employee ID:</span>
+            <span class="display-3">@EmployeesID</span>
+
+        </aside>
+    }
+</section>
+
+<section>
+    @foreach (var item in Models.EmployeesID)
+    {
+        <aside>
+            <span>Employee ID:</span>
+            <span>@item.EmployeesID</span>
+        </aside>
+
+        <aside>
+            <span>SLT:</span>
+            <span>@item.SLT</span>
+        </aside>
+
+        <aside>
+            <span>DeptOwner:</span>
+            <span>@item.DeptOwner</span>
+        </aside>
+
+        <aside>
+        <span>HRDept:</span>
+        <span>@item.HRDept</span>
+        </aside>
+    }
+</section>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+}
